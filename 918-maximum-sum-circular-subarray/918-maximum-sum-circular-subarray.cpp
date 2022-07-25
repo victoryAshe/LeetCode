@@ -1,4 +1,3 @@
-
 class Solution {
 public:
     int maxSubarraySumCircular(vector<int>& nums) {
@@ -19,13 +18,11 @@ public:
             
             maxNum = max(nums[i], nums[i]+maxNum);
             great = max(great, maxNum);
-            
         }
         
         if(minS==sum) return great;
         else sum-=minS;
         
         return max(sum, great);
-        
     }
 };
