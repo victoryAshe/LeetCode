@@ -1,11 +1,13 @@
 
 class Solution {
 public:
-    int great = -3 *pow(10,4);
-    int minS = 3*pow(10,4);
+
     
     int maxSubarraySumCircular(vector<int>& nums) {
         if(nums.size()==1) return nums[0];
+        
+        int great = -3 *pow(10,4);
+        int minS = 3*pow(10,4);
         
         vector<int> minNum = nums;
         int sum = nums[0];
