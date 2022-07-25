@@ -1,3 +1,7 @@
+#include <vector>
+#include <algorithm>
+#include <iostream>
+#include <cmath>
 class Solution {
 public:
     int great = -3 *pow(10,4);
