@@ -7,9 +7,8 @@ public:
         int great = -3 *pow(10,4);
         int minS = 3*pow(10,4);
         
-        //vector<int> minNum = nums;
-        int minNum = nums[0];
-        int sum = nums[0];
+        int sum, minNum, maxNum;
+        sum = minNum = maxNum = nums[0];
         
         for(int i = 1; i<nums.size(); i++)
         {
@@ -18,8 +17,8 @@ public:
             minNum = min(nums[i], nums[i]+minNum);
             minS = min(minS,minNum);
             
-            nums[i] = max(nums[i], nums[i]+nums[i-1]);
-            great = max(great, nums[i]);
+            maxNum = max(nums[i], nums[i]+maxNum);
+            great = max(great, maxNum);
             
         }
         
