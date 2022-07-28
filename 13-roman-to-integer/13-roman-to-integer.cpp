@@ -1,6 +1,6 @@
 class Solution {
 public:
-bool isSubDigit(string &s, int i)
+bool isSubDigit(string &s, int &i)
 {
 	if (i == s.length() - 1) return false;
 	
