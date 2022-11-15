@@ -19,9 +19,11 @@ public:
     vector<int> getRow(int rowIndex) {
         
         if(rowIndex==0) return d[0];
-        if(rowIndex==1) return d[1] = {1,1};
         
-        for(int i = 1; i<=rowIndex+1; i++)
+        d[1] = {1,1};
+        if(rowIndex==1) return d[1];
+        
+        for(int i = 2; i<=rowIndex+1; i++)
             generateRow(i);
         
         return d[rowIndex+1];
