@@ -15,6 +15,7 @@ public:
                     visited[i][j] = true;
                     //cout << i <<" "<< j << endl;
                     Search(board, i,j,word.substr(1));
+                    if(result) return result;
                     visited[i][j] = false;
                 }
             }
