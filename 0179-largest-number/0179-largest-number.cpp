@@ -4,10 +4,7 @@ public:
     
     static bool compare(const string &a, const string &b)
     {
-        if(a.length()!= b.length())
-            return stol(a+b) > stol(b+a);
-        
-        return stol(a)>stol(b);       
+        return a+b > b+a;
     }
     
     string largestNumber(vector<int>& nums) {
