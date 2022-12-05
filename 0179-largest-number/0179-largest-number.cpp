@@ -2,7 +2,7 @@
 class Solution {
 public:
     
-    static bool compare(string &a, string &b)
+    static bool compare(const string &a, const string &b)
     {
         return a+b > b+a;
     }
