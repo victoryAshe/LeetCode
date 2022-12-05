@@ -20,7 +20,7 @@ public:
             answer+=snums[i];
         
         //exception handling: "00" 
-        if(count(answer.begin(), answer.end(), '0')==answer.length())
+        if(answer[0]=='0')
             return "0";
         
         return answer;
