@@ -8,8 +8,8 @@ public:
         
         for(i = 0; i<size; i++)
         {
-            if(s[i]=='*') ans.pop_back();
-            else ans.push_back(s[i]);
+            if(s[i]==42) ans.pop_back();
+            else ans+=s[i];
         }
         
         return ans;
