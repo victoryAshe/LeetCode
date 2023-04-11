@@ -5,11 +5,12 @@ public:
         int i;
         
         string ans = "";
-        
+        char c;
         for(i = 0; i<size; i++)
         {
-            if(s[i]==42) ans.pop_back();
-            else ans+=s[i];
+            c = s[i];
+            if(c == 42) ans.pop_back();
+            else ans += c;
         }
         
         return ans;
