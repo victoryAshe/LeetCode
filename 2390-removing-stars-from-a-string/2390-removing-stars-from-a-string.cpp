@@ -9,7 +9,7 @@ public:
         for(i = 0; i<size; i++)
         {
             if(s[i]=='*') ans.pop_back();
-            else ans+=s[i];
+            else ans.push_back(s[i]);
         }
         
         return ans;
