@@ -7,13 +7,14 @@ public:
             nums1 = nums2;
             return;
         }
-        vector<int>::iterator p1, p2;
-        p1 = nums1.end()-1;
-        p2 = nums2.begin();
+        int p1, p2;
+        p1 = nums1.size()-1;
+        p2 = 0;
         
         for(int i = 0; i<n; i++)
         {
-            *p1-- = *p2++;
+            nums1[p1--] = nums2[p2++];
+            //*p1-- = *p2++;
         }
         sort(nums1.begin(), nums1.end());
         
