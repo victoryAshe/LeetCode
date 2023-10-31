@@ -14,7 +14,6 @@ public:
         for(int i = 0; i<n; i++)
         {
             nums1[p1--] = nums2[p2++];
-            //*p1-- = *p2++;
         }
         sort(nums1.begin(), nums1.end());
         
