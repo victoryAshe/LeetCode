@@ -2,7 +2,7 @@ class Solution {
 public:
     bool isHappy(int n) {
         
-        map<vector<int>, int> dict;
+        vector<vector<int>> sets;
         
         while(true)
         {
@@ -16,7 +16,7 @@ public:
             if(n>0) temp.push_back(n);
             
             // 현재 map에 해당 숫자들이 key로 존재하는지 검색
-            if(dict.find(temp)!=dict.end())
+            if(find(sets.begin(), sets.end(), temp)!=sets.end())
             {
                 return false;
             }
@@ -30,12 +30,10 @@ public:
             if(val==1) return true;
             
             // happy가 아니면, 추가
-            dict.insert(make_pair(temp, val));
+            sets.push_back(temp);
             
             // 다음 실행 준비
             n = val;
-            
-            
         }
     }
 };
